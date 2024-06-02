@@ -1,0 +1,8 @@
+<h2>Rectangle Creator</h2>
+<button id="process-images">Process Images</button>
+
+<script>
+document.getElementById('process-images').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'process-images' } }, '*');
+};
+</script>
