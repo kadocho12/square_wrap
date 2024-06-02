@@ -58,6 +58,9 @@ figma.ui.onmessage = async msg => {
       image.y = (frame.height - image.height) / 2;
     });
 
+    // 6. 作成したフレームをすべて選択
+    figma.currentPage.selection = frames;
+
     figma.ui.postMessage({ type: 'export-done', images: exportedImages });
     figma.closePlugin("Images exported successfully!");
   }
