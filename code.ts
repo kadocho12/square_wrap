@@ -4,8 +4,8 @@ figma.ui.onmessage = async msg => {
   if (msg.type === 'process-images') {
     const selection = figma.currentPage.selection;
     
-    if (selection.length !== 6 || !selection.every(node => node.type === 'RECTANGLE')) {
-      figma.closePlugin("Please select exactly 6 images.");
+    if (selection.length === 0 || !selection.every(node => node.type === 'RECTANGLE')) {
+      figma.closePlugin("Please select one or more images.");
       return;
     }
 
