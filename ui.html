@@ -1,5 +1,22 @@
-<h2>Rectangle Creator</h2>
-<button id="process-images">Process Images</button>
+<p>ボタンを押すと、選択しているサイズがバラバラの画像を同じサイズの正方形で囲みます。</p>
+<button id="process-images">正方形で囲む</button>
+
+<style>
+  #process-images {
+    padding: 8px 16px;
+    background-color: #333;
+    border: 2px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  #process-images:hover {
+    background-color: #fff;
+    color: #333;
+  }
+</style>
 
 <script>
 document.getElementById('process-images').onclick = () => {
